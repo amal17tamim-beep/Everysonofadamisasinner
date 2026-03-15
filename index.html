@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Every son of Adam sins | The Examined Mind</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1408;
+      --gold: #b8860b;
+      --warm-gray: #7a6e60;
+      --accent: #c9a84c;
+    }
+
+```
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: 'Lora', serif;
+  line-height: 1.85;
+  font-size: 1.05rem;
+}
+
+/* Grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.4;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  border-bottom: 1px solid rgba(184,134,11,0.25);
+  animation: fadeUp 1s ease both;
+}
+
+.site-label {
+  font-family: 'Lora', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 3rem;
+}
+
+.site-label a {
+  color: var(--warm-gray);
+  text-decoration: none;
+}
+
+.title-arabic {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  direction: rtl;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  color: var(--ink);
+}
+
+.subtitle-block {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-left: 2px solid var(--gold);
+  text-align: left;
+}
+
+.subtitle-arabic {
+  font-size: 0.95rem;
+  direction: rtl;
+  color: var(--warm-gray);
+  font-style: italic;
+  line-height: 2;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle-english {
+  font-size: 0.9rem;
+  color: var(--warm-gray);
+  font-style: italic;
+}
+
+.meta {
+  margin-top: 2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 2rem;
+  animation: fadeUp 1.2s ease both;
+}
+
+.divider-line {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold));
+}
+
+.divider-line.right {
+  background: linear-gradient(to left, transparent, var(--gold));
+}
+
+.divider-ornament {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+article {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+  animation: fadeUp 1.4s ease both;
+}
+
+p {
+  margin-bottom: 1.75rem;
+  color: #2a2018;
+}
+
+p:first-child::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  float: left;
+  line-height: 0.75;
+  margin-right: 0.12em;
+  margin-top: 0.1em;
+  color: var(--gold);
+}
+
+blockquote {
+  margin: 2.5rem 0;
+  padding: 1.5rem 2rem;
+  border-left: 3px solid var(--gold);
+  background: rgba(184,134,11,0.05);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+blockquote .arabic {
+  display: block;
+  direction: rtl;
+  font-style: normal;
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.section-break {
+  text-align: center;
+  color: var(--gold);
+  margin: 2.5rem 0;
+  letter-spacing: 0.5em;
+  font-size: 0.7rem;
+}
+
+.closing {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(184,134,11,0.2);
+  font-style: italic;
+  color: var(--warm-gray);
+  font-size: 0.95rem;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  header { padding: 2.5rem 1.25rem 1.5rem; }
+  article { padding: 0 1.25rem 4rem; }
+  .subtitle-block { padding: 1.25rem; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="site-label"><a href="#">The Examined Mind</a></div>
+
+```
+<div class="title-arabic">كُلُّ ابْنِ آدَمَ خَطَّاءٌ، وَخَيْرُ الْخَطَّائِينَ التَّوَّابُونَ</div>
+
+<h1>Every son of Adam sins, and the best of sinners are those who repent</h1>
+
+<div class="subtitle-block">
+  <div class="subtitle-arabic">لَوْ لَمْ تُذْنِبُوا لَذَهَبَ اللَّهُ بِكُمْ وَلَجَاءَ بِقَوْمٍ يُذْنِبُونَ فَيَسْتَغْفِرُونَ اللَّهُ فَيَغْفِرُ لَهُمْ</div>
+  <div class="subtitle-english">"If you did not sin, Allah would replace you with a people who do sin, and who ask forgiveness, and He would forgive them." — Hadith Qudsi</div>
+</div>
+
+<div class="meta">Essay &nbsp;·&nbsp; The Examined Mind</div>
+```
+
+  </header>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-ornament">✦</div>
+    <div class="divider-line right"></div>
+  </div>
+
+  <article>
+
+```
+<p>Somewhere between the Friday khutbah and the WhatsApp forwards from your aunties, the message got lost. What started as one of the most radical, merciful ideas in human history — that God loves you not despite your brokenness but somehow because of it — became a checklist. A performance. A competition about who is sinning least visibly.</p>
+
+<p>But go back to the actual text. Not the culture, not the institution, not the sheikh who confuses shame with piety. The actual words. And what you find is almost uncomfortable in how generous it is.</p>
+
+<blockquote>
+  <span class="arabic">كُلُّ ابْنِ آدَمَ خَطَّاءٌ</span>
+  Every single son of Adam sins. Not some of them. Not the weak ones. Every one.
+</blockquote>
+
+<p>That's not a warning. That's almost a description of what it means to be human. To be made of flesh and time and forgetting — that is the condition. And God, according to this, knew that when He made you. He wasn't surprised. He didn't miscalculate. You were not a failed prototype.</p>
+
+<div class="section-break">· · ·</div>
+
+<p>The hadith qudsi takes it even further and honestly it should stop people in their tracks. God says: if you didn't sin, I would replace you with people who do. Think about what that means. The sinning — and more specifically the returning, the repenting, the tawbah — is not a deviation from the plan. It is woven into it. The relationship between the human and the divine was always meant to include this: the falling, and the turning back.</p>
+
+<p>Tawbah doesn't just mean sorry. The Arabic root means to turn. To physically reorient yourself back toward something. Which implies that the whole human journey is one of turning and returning. Not arriving once and staying perfectly still. Turning. Again and again. And every time you turn back, something in that movement is beloved.</p>
+
+<div class="section-break">· · ·</div>
+
+<p>Christianity holds a version of this too. The prodigal son comes back having wasted everything, and his father — who represents God in the parable — doesn't just accept him. He runs toward him. Throws a feast. And then says something that should unsettle comfortable religion forever: I rejoice more over this one than over the son who never left. The one who struggled and returned is celebrated above the one who never strayed.</p>
+
+<p>In both traditions the logic is the same at its core. God's love isn't a reward for good behaviour. It's not something you earn by being the least embarrassing version of yourself at family gatherings. It is directed at you as you actually are — failing, trying, doubting, returning.</p>
+
+<div class="section-break">· · ·</div>
+
+<p>So why are so many people leaving religion? Not because they've read too much. Because they haven't been given the real thing. They've been handed a God who is mainly disappointed in them, surrounded by gatekeepers keeping score. And at some point a person looks at that and thinks — if this is what God is, I want nothing to do with it.</p>
+
+<p>And honestly? That instinct is correct. That version of God should be rejected. The problem is that version isn't in the book. It's in the people who decided shame was a better tool than mercy.</p>
+
+<blockquote>
+  The fitra — the concept in Islam of the natural, pure disposition every human is born with — says you were oriented toward truth before anyone taught you anything. You don't need someone to install God in you. You need to stop letting people bury what was already there.
+</blockquote>
+
+<p>Read for yourself. Think for yourself. And trust that the mercy described in those books — radical, embarrassingly generous, directed at sinners specifically — is real, and meant for you, as you actually are right now. Not the version of you that has everything figured out. This one.</p>
+
+<div class="closing">
+  The reed cries because it was cut from the reed bed. The separation, the longing, the ache of it — that is what produces the music. Without the wound, there is no song. — Rumi
+</div>
+```
+
+  </article>
+
+</body>
+</html>
